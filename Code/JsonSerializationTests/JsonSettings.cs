@@ -8,6 +8,14 @@ namespace JsonSerializationTests
 {
     public static class JsonSettings
     {
+        public static readonly JsonSerializerSettings NewtonsoftJsonPreserveReferencesSettings = 
+            new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                PreserveReferencesHandling = PreserveReferencesHandling.All,
+                Formatting = Formatting.Indented
+            };
+
         public static readonly JsonSerializerSettings NewtonsoftJsonSettings =
             new JsonSerializerSettings
             {
