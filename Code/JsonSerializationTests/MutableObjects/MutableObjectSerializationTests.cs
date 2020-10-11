@@ -4,7 +4,7 @@ using Xunit;
 using SystemTextJsonSerializer = System.Text.Json.JsonSerializer;
 using Utf8JsonSerializer = Utf8Json.JsonSerializer;
 
-namespace JsonSerializationTests
+namespace JsonSerializationTests.MutableObjects
 {
     public static class MutableObjectSerializationTests
     {

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using SystemTextJsonSerializer = System.Text.Json.JsonSerializer;
 using Utf8JsonSerializer = Utf8Json.JsonSerializer;
 
-namespace Benchmarks
+namespace Benchmarks.MutableObjects
 {
     public class SerializeMutableObjectBenchmark
     {

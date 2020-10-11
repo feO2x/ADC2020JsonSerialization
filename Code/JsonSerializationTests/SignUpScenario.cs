@@ -14,5 +14,12 @@ namespace JsonSerializationTests
             LastName = "Pflug",
             OrganizationId = 2
         };
+
+        public static readonly ImmutableSignUpDto ImmutableObject = new ImmutableSignUpDto(
+                "kenny.pflug@synnotech.de",
+                "Kenny",
+                "Pflug",
+                2
+            );
     }
 }
