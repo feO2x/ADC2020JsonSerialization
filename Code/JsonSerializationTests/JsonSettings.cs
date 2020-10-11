@@ -8,6 +8,12 @@ namespace JsonSerializationTests
 {
     public static class JsonSettings
     {
+        public static readonly JsonSerializerSettings NewtonsoftJsonSettings =
+            new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
+
         public static readonly JsonSerializerSettings NewtonsoftJsonPreserveReferencesSettings = 
             new JsonSerializerSettings
             {
@@ -16,10 +22,13 @@ namespace JsonSerializationTests
                 Formatting = Formatting.Indented
             };
 
-        public static readonly JsonSerializerSettings NewtonsoftJsonSettings =
+        public static readonly JsonSerializerSettings NewtonsoftJsonPolymorphicSettings = 
             new JsonSerializerSettings
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver =  new CamelCasePropertyNamesContractResolver(),
+                TypeNameHandling = TypeNameHandling.All,
+                TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Simple,
+                Formatting = Formatting.Indented
             };
 
         public static readonly JsonSerializerOptions SystemTextJsonOptions =

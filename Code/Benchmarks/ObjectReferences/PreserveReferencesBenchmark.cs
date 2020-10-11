@@ -12,6 +12,6 @@ namespace Benchmarks.ObjectReferences
 
         [Benchmark]
         public A JsonNetDeserialize() =>
-            JsonConvert.DeserializeObject<A>("{\"$id\":\"1\",\"b\":{\"$id\":\"2\",\"c\":{\"$id\":\"3\"}},\"c\":{\"$ref\":\"3\"}}", JsonSettings.NewtonsoftJsonPreserveReferencesSettings);
+            JsonConvert.DeserializeObject<A>("{\"$id\":\"1\",\"b\":{\"$id\":\"2\",\"c\":{\"$id\":\"3\"}},\"c\":{\"$ref\":\"3\"}}", JsonSettings.NewtonsoftJsonPreserveReferencesSettings)!;
     }
 }
