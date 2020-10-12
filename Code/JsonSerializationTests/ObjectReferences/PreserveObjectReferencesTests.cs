@@ -39,7 +39,7 @@ namespace JsonSerializationTests.ObjectReferences
 
             var deserializedGraph = SystemTextJsonSerializer.Deserialize<A>(json, options);
 
-            deserializedGraph.C.Should().BeSameAs(deserializedGraph.B.C);
+            deserializedGraph!.C.Should().BeSameAs(deserializedGraph.B.C);
         }
 
         [Fact]

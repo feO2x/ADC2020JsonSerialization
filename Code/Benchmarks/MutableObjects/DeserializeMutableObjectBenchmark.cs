@@ -10,7 +10,7 @@ namespace Benchmarks.MutableObjects
     public class DeserializeMutableObjectBenchmark
     {
         [Benchmark(Baseline = true)]
-        public SignUpDto JsonNet() => JsonConvert.DeserializeObject<SignUpDto>(SignUpScenario.Json, JsonSettings.NewtonsoftJsonSettings);
+        public SignUpDto JsonNet() => JsonConvert.DeserializeObject<SignUpDto>(SignUpScenario.Json, JsonSettings.NewtonsoftJsonSettings)!;
 
         [Benchmark]
         public SignUpDto SystemTextJson() => SystemTextJsonSerializer.Deserialize<SignUpDto>(SignUpScenario.Json, JsonSettings.SystemTextJsonOptions);
