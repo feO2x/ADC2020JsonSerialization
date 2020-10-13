@@ -13,7 +13,7 @@ namespace Benchmarks.MutableObjects
         public SignUpDto JsonNet() => JsonConvert.DeserializeObject<SignUpDto>(SignUpScenario.Json, JsonSettings.NewtonsoftJsonSettings)!;
 
         [Benchmark]
-        public SignUpDto SystemTextJson() => SystemTextJsonSerializer.Deserialize<SignUpDto>(SignUpScenario.Json, JsonSettings.SystemTextJsonOptions);
+        public SignUpDto SystemTextJson() => SystemTextJsonSerializer.Deserialize<SignUpDto>(SignUpScenario.Json, JsonSettings.SystemTextJsonOptions)!;
 
         [Benchmark]
         public SignUpDto Utf8Json() => Utf8JsonSerializer.Deserialize<SignUpDto>(SignUpScenario.Json, JsonSettings.Utf8JsonResolver);
